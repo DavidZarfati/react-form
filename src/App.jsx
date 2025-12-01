@@ -16,12 +16,25 @@ function App() {
     setArticoli(articoli.filter((_, i) => i !== index))
   }
 
+  const modificaArticolo = (index) => {
+    const nuovoTitolo = prompt("Inserisci un nuovo titolo", articoli[index].title)
+    const nuovoContenuto = prompt("Inserisci un nuovo contenuto", articoli[index].content)
+
+    if (nuovoTitolo !== null && nuovoContenuto !== null) {
+      setArticoli(articoli.map((articolo, i) =>
+        i === index
+          ? { ...articolo, title: nuovoTitolo, content: nuovoContenuto }
+          : articolo
+      ))
+    }
+  }
+
   return (
     <>
       <div className="container titolo"><h1>Narcisistarticoli</h1></div>
       <div className="container">
         <FormInputArticoli articoli={articoli} setArticoli={setArticoli} />
-        <CardGrid articoli={articoli} removeArticolo={removeArticolo} />
+        <CardGrid articoli={articoli} removeArticolo={removeArticolo} modificaArticolo={modificaArticolo} />
       </div>
     </>
   )

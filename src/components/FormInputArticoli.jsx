@@ -26,6 +26,22 @@ export default function FormInputArticoli({ articoli = [], setArticoli }) {
         }
         setArticoli(newArticoliWithout);
     }
+    function modificaArticolo(indexToModify) {
+        console.log(`Voglio Modificare l'elemento di indice ${indexToModify}`);
+
+        const nuovoTitolo = prompt("Inserisci un nuovo titolo", articoli[indexToModify].title);
+        const nuovoContenuto = prompt("Inserisci un nuovo contenuto", articoli[indexToModify].content);
+        
+        if (nuovoTitolo !== null && nuovoContenuto !== null) {
+            const newArticoliModificato = articoli.map((articolo, i) => {
+                if (i === indexToModify) {
+                    return { ...articolo, title: nuovoTitolo, content: nuovoContenuto };
+                }
+                return articolo;
+            });
+            setArticoli(newArticoliModificato);
+        }
+    }
     return (
         <>
             <form onSubmit={submitHandler}>
