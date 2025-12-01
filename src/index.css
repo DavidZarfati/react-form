@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style: none;
 }
 
 .container {
@@ -11,10 +12,16 @@
 }
 
 .card {
-  background-color: rgb(114, 255, 101);
+  /* background-color: rgb(114, 255, 101); */
+  /* background-image: url(./img/post-it.jpg); */
+  /* background-size: contain; */
+  /* background-repeat: no-repeat; */
+  background-color: #FF6B6B;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .lista-card {
@@ -26,21 +33,47 @@
   padding: 20px;
 }
 
+.card-sinistra h2 {
+  color: #45B7D1;
+}
+
+.card-sinistra p {
+  color: gold;
+}
+
 .card-destra {
   padding: 20px;
 }
 
 .card-sinistra h2 {
   margin-bottom: 20px;
-  color: red;
 }
 
 input {
   margin: 5px;
   border: red 1px solid;
+  padding: 10px;
 }
 
 .titolo {
   display: flex;
   justify-content: center;
+}
+
+
+
+button {
+  padding: 10px;
+  background-color: #FF6B6B;
+  color: gold;
+}
+
+.card button {
+  padding: 10px;
+  background-color: #4ECDC4;
+  color: gold;
+}
+
+body {
+  background-color: #4ECDC4;
 }

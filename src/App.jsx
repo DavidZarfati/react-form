@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-      <div className="container titolo"><h1>TO BOO LIST</h1></div>
+      <div className="container titolo"><h1>I Miei Articoli</h1></div>
       <div className="container">
         <FormInputArticoli articoli={articoli} setArticoli={setArticoli} />
         <CardGrid articoli={articoli} removeArticolo={removeArticolo} />
