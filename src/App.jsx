@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import './App.css'
 import CardGrid from '../components/CardGrid'
+import FormInputArticoli from '../components/FormInputArticoli'
 
 const articoli = [
-  { title: "mucche alla riscossa", content: "Yodel-Adle-Eedle-Idle-Oo", id: 1 },
-  { title: "mucche alla riscossa", content: "Yodel-Adle-Eedle-Idle-Oo", id: 2 },
-  { title: "mucche alla riscossa", content: "Yodel-Adle-Eedle-Idle-Oo", id: 3 },
+  // { title: "mucche alla riscossa", content: "Yodel-Adle-Eedle-Idle-Oo", id: 1 },
+  // { title: "mucche alla riscossa", content: "Yodel-Adle-Eedle-Idle-Oo", id: 2 },
+  // { title: "mucche alla riscossa", content: "Yodel-Adle-Eedle-Idle-Oo", id: 3 },
 ]
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
 
   return (
     <>
-      <CardGrid articoli={articoli} />
+      <FormInputArticoli articoli={articoli} />
+      {/* <CardGrid articoli={articoli} /> */}
     </>
   )
 }

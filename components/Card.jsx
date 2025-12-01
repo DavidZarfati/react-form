@@ -1,8 +1,10 @@
-export default function Card({ title, content }) {
+export default function Card({ title, content, id }) {
     return (
-        <div>
-            <h1>{title}</h1>
-            <p>{content}</p>
-        </div>
+        <li>
+            <div key={id}>
+                <h2>{title}</h2>
+                <p>{content}</p>
+            </div>
+        </li>
     )
 }
