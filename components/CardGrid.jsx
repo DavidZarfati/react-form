@@ -1,7 +1,11 @@
 import Card from "./Card";
 
-export default function (articoli) {
+export default function CardGrid({ articoli }) {
     return (
-        <Card />
-    )
+        <>
+            {articoli.map((articolo, index) => (
+                <Card key={index} {...articolo} />
+            ))}
+        </>
+    );
 }
