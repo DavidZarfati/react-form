@@ -40,17 +40,20 @@ export default function FormInputArticoli({ articoli: articoliIniziali = [] }) {
                     }} />
                 <button type="submit">Aggiungi Nuovo Articolo</button>
             </form>
-            <ul>
+            <ul className='lista-card'>
                 {articoli.map((articolo, index) => (
                     <li key={index}>
-                        <div key={articolo.id}>
-                            <h2>{articolo.title}</h2>
-                            <p>{articolo.content}</p>
-                            <button onClick={() => {
-                                removeArticolo(index);
-                            }}>Rimuovi</button>
+                        <div className='card' key={index}>
+                            <div className="card-sinistra">
+                                <h2>{articolo.title}</h2>
+                                <p>{articolo.content}</p>
+                            </div>
+                            <div className="card-destra">
+                                <button onClick={() => {
+                                    removeArticolo(index);
+                                }}>Rimuovi</button>
+                            </div>
                         </div>
-                        {/* <Card key={index} titolo={articolo} /> */}
                     </li >
                 ))
                 }

@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  width: 85%;
+  padding-top: 20px;
+}
+
+.card {
+  background-color: rgb(114, 255, 101);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lista-card {
+  margin-top: 30px;
+  list-style: none;
+}
+
+.card-sinistra {
+  padding: 20px;
+}
+
+.card-destra {
+  padding: 20px;
+}
+
+.card-sinistra h2 {
+  margin-bottom: 20px;
+  color: red;
+}
+
+input {
+  margin: 5px;
+  border: red 1px solid;
+}
