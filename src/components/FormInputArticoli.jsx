@@ -2,10 +2,9 @@
 import { useState } from 'react';
 import Card from './Card';
 
-export default function FormInputArticoli({ articoli: articoliIniziali = [] }) {
+export default function FormInputArticoli({ articoli = [], setArticoli }) {
     const [newArticolo, setNewArticolo] = useState('');
     const [newContent, setNewContent] = useState('');
-    const [articoli, setArticoli] = useState(articoliIniziali);
     function submitHandler(event) {
         event.preventDefault();
         if (newArticolo.trim()) {
@@ -40,24 +39,6 @@ export default function FormInputArticoli({ articoli: articoliIniziali = [] }) {
                     }} />
                 <button type="submit">Aggiungi Nuovo Articolo</button>
             </form>
-            <ul className='lista-card'>
-                {articoli.map((articolo, index) => (
-                    <li key={index}>
-                        <div className='card' key={index}>
-                            <div className="card-sinistra">
-                                <h2>{articolo.title}</h2>
-                                <p>{articolo.content}</p>
-                            </div>
-                            <div className="card-destra">
-                                <button onClick={() => {
-                                    removeArticolo(index);
-                                }}>Rimuovi</button>
-                            </div>
-                        </div>
-                    </li >
-                ))
-                }
-            </ul >
         </>
     )
 }

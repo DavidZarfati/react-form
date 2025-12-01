@@ -39,3 +39,8 @@ input {
   margin: 5px;
   border: red 1px solid;
 }
+
+.titolo {
+  display: flex;
+  justify-content: center;
+}
