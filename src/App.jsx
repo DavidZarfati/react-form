@@ -4,9 +4,9 @@ import CardGrid from './components/CardGrid'
 import FormInputArticoli from './components/FormInputArticoli'
 
 const articoliIniziali = [
-  //   { title: "mucche alla riscossa1", content: "Yodel-Adle-Eedle-Idle-Oo", id: 1 },
-  //   { title: "mucche alla riscossa2", content: "Yodel-Adle-Eedle-Idle-Oo", id: 2 },
-  //   { title: "mucche alla riscossa3", content: "Yodel-Adle-Eedle-Idle-Oo", id: 3 },
+  { title: "Reteeeeeeeee", content: "Un incredibile Goal Di Zarfati Regala La Vittoria Alla Sua Squadra", id: 1 },
+  { title: "E' Un Uomo?Un Aereo?Un Uccello?", content: "Il Racconto Emozionante Di Quando Sono Caduto Facendo Parkour", id: 2 },
+  { title: "Uomo Muore e Poi Risorge Il Giorno Seguente", content: "A Rega, TRANQUILLI!, stavo a fa un pisolino...", id: 3 },
 ]
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-      <div className="container titolo"><h1>I Miei Articoli</h1></div>
+      <div className="container titolo"><h1>Narcisistarticoli</h1></div>
       <div className="container">
         <FormInputArticoli articoli={articoli} setArticoli={setArticoli} />
         <CardGrid articoli={articoli} removeArticolo={removeArticolo} />

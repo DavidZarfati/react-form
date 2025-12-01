@@ -66,6 +66,7 @@ button {
   padding: 10px;
   background-color: #FF6B6B;
   color: gold;
+  margin-left: 20px;
 }
 
 .card button {
@@ -76,4 +77,13 @@ button {
 
 body {
   background-color: #4ECDC4;
+}
+
+button:hover {
+  background-color: red;
+}
+
+.card:hover {
+  background-color: green;
+  color: black;
 }
